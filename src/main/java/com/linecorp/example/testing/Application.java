@@ -7,7 +7,11 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-import com.linecorp.example.springempty.db.DbContract;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.linecorp.example.testing.db.DbContract;
 
 @SpringBootApplication(exclude=DataSourceAutoConfiguration.class)
 public class Application extends SpringBootServletInitializer
