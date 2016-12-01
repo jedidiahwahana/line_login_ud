@@ -28,7 +28,7 @@ public class PostgresHelper {
     }
     
     public boolean connect() throws SQLException, ClassNotFoundException {
-        if (host.isEmpty() || dbName.isEmpty() || user.isEmpty() || pass.isEmpty()) {
+        if (url.isEmpty()) {
             throw new SQLException("Database credentials missing");
         }
         
