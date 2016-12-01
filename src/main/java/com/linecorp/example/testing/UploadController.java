@@ -27,8 +27,7 @@ import com.linecorp.example.testing.db.PostgresHelper;
 @RequestMapping(value="/testing")
 public class UploadController
 {
-    PostgresHelper client = new PostgresHelper(DbContract.HOST, DbContract.DB_NAME,
-                                               DbContract.USERNAME, DbContract.PASSWORD);
+    PostgresHelper client = new PostgresHelper(DbContract.URL);
     
     @RequestMapping(value="/singleSave", method=RequestMethod.POST )
     public @ResponseBody String singleSave(@RequestParam("file") MultipartFile file, @RequestParam("desc") String desc ){

@@ -12,7 +12,7 @@ import org.json.JSONArray;
 public class PostgresHelper {
     
     private Connection conn;
-    private String host;
+    private String url;
     private String dbName;
     private String user;
     private String pass;

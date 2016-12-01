@@ -23,8 +23,7 @@ public class Download
     @RequestMapping(value="/fileDownload", method=RequestMethod.GET)
     public ResponseEntity<String> world()
     {
-        PostgresHelper client = new PostgresHelper(DbContract.HOST, DbContract.DB_NAME,
-                                                   DbContract.USERNAME, DbContract.PASSWORD);
+        PostgresHelper client = new PostgresHelper(DbContract.URL);
         
         JSONArray existsData = new JSONArray();
         System.out.println("Temp Data: " + existsData.toString());
