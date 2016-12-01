@@ -1,12 +1,13 @@
 
-package com.linecorp.example.weblogin;
+package com.linecorp.example.testing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude=DataSourceAutoConfiguration.class)
 public class Application extends SpringBootServletInitializer
 {
     @Override

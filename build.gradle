@@ -1,6 +1,6 @@
 
 apply plugin: 'spring-boot'
-apply plugin: 'war'
+//apply plugin: 'war'
 
 //sourceCompatibility = 1.7
 
@@ -19,8 +19,8 @@ buildscript
 
 
 
-//jar
-war
+jar
+//war
 {
 	baseName = 'line-weblogin-example'
 	version = '0.1.0'
@@ -51,8 +51,10 @@ dependencies
 {
 	compile('org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE')
 	compile('org.springframework:spring-jdbc:4.3.2.RELEASE')
-    compile('org.apache.httpcomponents:httpclient:4.5.2')
+    	compile('org.apache.httpcomponents:httpclient:4.5.2')
 	compile('com.google.code.gson:gson:2.7')
+	compile('org.json:json:20160212')
+	compile('org.postgresql:postgresql:9.4.1212.jre7')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat:1.4.0.RELEASE')
 	testCompile("junit:junit")
 }
