@@ -28,10 +28,7 @@ public class Application extends SpringBootServletInitializer
         
         try {
             Class.forName("org.postgresql.Driver");
-            Connection c = DriverManager.getConnection(
-                                                       DbContract.HOST+DbContract.DB_NAME,
-                                                       DbContract.USERNAME,
-                                                       DbContract.PASSWORD);
+            Connection c = DriverManager.getConnection(DbContract.URL);
             
             System.out.println("DB connected");
             

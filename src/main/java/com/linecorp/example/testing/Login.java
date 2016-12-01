@@ -41,8 +41,7 @@ public class Login
 {
     HttpClient c = HttpClientBuilder.create().build();
     
-    PostgresHelper client = new PostgresHelper(DbContract.HOST, DbContract.DB_NAME,
-                                               DbContract.USERNAME, DbContract.PASSWORD);
+    PostgresHelper client = new PostgresHelper(DbContract.URL);
     
     // Act as server to get code, errorCode, and errorMessage from URL
     

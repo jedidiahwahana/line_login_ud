@@ -20,11 +20,11 @@ public class PostgresHelper {
     //we don't like this constructor
     protected PostgresHelper() {}
     
-    public PostgresHelper(String host, String dbName, String user, String pass) {
-        this.host = host;
-        this.dbName = dbName;
-        this.user = user;
-        this.pass = pass;
+    public PostgresHelper(String url) {
+        this.url = url;
+//        this.dbName = dbName;
+//        this.user = user;
+//        this.pass = pass;
     }
     
     public boolean connect() throws SQLException, ClassNotFoundException {
@@ -33,9 +33,7 @@ public class PostgresHelper {
         }
         
         Class.forName("org.postgresql.Driver");
-        this.conn = DriverManager.getConnection(
-                                                this.host + this.dbName,
-                                                this.user, this.pass);
+        this.conn = DriverManager.getConnection(this.url);
         return true;
     }
     
