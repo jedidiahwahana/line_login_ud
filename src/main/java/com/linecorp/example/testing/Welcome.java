@@ -14,7 +14,7 @@ public class Welcome
     @RequestMapping(value="/welcome", method=RequestMethod.GET)
     public ResponseEntity<String> world()
     {
-        final String html = "<html><body><form action=\"https://access.line.me/dialog/oauth/weblogin\" method=\"GET\"><input type=\"hidden\" name = \"response_type\" value=\"code\" /><input type=\"hidden\" name = \"client_id\" value=\"1479418979\" /><input type=\"hidden\" name = \"state\" value=\"x\" /><input type=\"hidden\" name = \"redirect_uri\" value=\"http://localhost:8080/testing/profile\" /><input type=\"submit\" value=\"Log In\"/></form></body></html>";
+        final String html = "<html><body><form action=\"https://access.line.me/dialog/oauth/weblogin\" method=\"GET\"><input type=\"hidden\" name = \"response_type\" value=\"code\" /><input type=\"hidden\" name = \"client_id\" value=\"1479418979\" /><input type=\"hidden\" name = \"state\" value=\"x\" /><input type=\"hidden\" name = \"redirect_uri\" value=\"https://frozen-temple-45408/testing/profile\" /><input type=\"submit\" value=\"Log In\"/></form></body></html>";
         return new ResponseEntity<String>(html, HttpStatus.OK);
     }
 };

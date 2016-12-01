@@ -42,10 +42,6 @@ public class Download
             System.out.println("Unknown exception occurs");
         }
         
-        /*
-        final String html = "<html><body><h1>Download File</h1><a href='/download/internal'\">Download This File (located inside project)</a><br/><a href='/download/external'\">Download This File (located outside project, on file system)</a></body></html> ";
-        */
-        
         return new ResponseEntity<String>(existsData.toString(), HttpStatus.OK);
     }
 };
