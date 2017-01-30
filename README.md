@@ -1,6 +1,6 @@
-# line-example-weblogin #
+# line_login_ud #
 
-This repository demonstrates how to use LINE Web Login using Spring Framework.
+This repository demonstrates how to use LINE Web Login using Spring Framework and PostgreSQL.
 
 ### How do I get set up? ###
 
